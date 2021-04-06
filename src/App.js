@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'; // used when using class based components
+import Header from "./components/Header";
 
-function App() {
+// /* class based component */
+// class App extends React.Component {
+//   render() {
+//     return (
+//       <div className = "container">
+//           <Header />
+//           <h3>Testing Class Based Component</h3>
+//       </div>
+
+
+//     )
+//   }
+// }
+
+
+const App = () => {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    /* It looks like HTML but it is JSX (javaScript extension) */
+    <div className="container">
+
+      {/* passing in props - and handle it in the Header file */}
+      <Header title = "Task Tracker"/> 
     </div>
   );
 }
